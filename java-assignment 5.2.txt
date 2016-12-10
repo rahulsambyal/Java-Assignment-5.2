@@ -1,0 +1,76 @@
+package myPack;
+
+public interface Stack {
+	void push(int i);
+	int pop();
+}
+
+
+package myPack;
+import java.util.*;
+public class FixedStack implements Stack{
+	int size;
+		 FixedStack(){
+			 System.out.println("Enter the Size of Stack");
+			 Scanner scan= new Scanner(System.in);
+			int p= scan.nextInt();
+			this.size=p;
+		}
+		public void push(int i){
+			//FixedStack r= new FixedStack();
+			if(i>size)		System.out.println("Stack overflow");
+			
+		}
+		public int pop(){
+			System.out.println("enter the number of integers");
+			Scanner scan= new Scanner(System.in);
+			int pop= scan.nextInt();
+			return pop;
+			
+		}
+		public static void main(String args[]){
+			FixedStack a= new FixedStack();
+			int k=a.pop();
+			a.push(k);
+			
+		}
+		
+}
+
+
+
+
+
+package myPack;
+import java.util.*;
+public class VariableStack {
+int size;
+VariableStack(){
+	 System.out.println("Enter the Size of Stack");
+	 Scanner scan= new Scanner(System.in);
+	int p= scan.nextInt();
+	this.size=p;
+}
+public void push(int i){
+	//FixedStack r= new FixedStack();
+	if(i>size)		
+		this.size=i;
+		System.out.println("New Size of Stack is "+i);
+	
+}
+public int pop(){
+	System.out.println("enter the number of integers");
+	Scanner scan= new Scanner(System.in);
+	int pop= scan.nextInt();
+	return pop;
+	
+}
+public static void main(String args[]){
+	VariableStack a= new VariableStack();
+	int k=a.pop();
+	a.push(k);
+	
+}
+
+}
+
